@@ -1,0 +1,84 @@
+/* TaskItem.css */
+
+/* Style the dropdown options */
+.action-dropdown select {
+  background-color: #f9f9f9;
+  color: #e6b56f;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.action-dropdown select:hover {
+  background-color: #e6b56f; /* Change background on hover */
+  color: white; /* Change text color on hover */
+}
+
+/* Task Item Styles */
+.task-item {
+  border-bottom: 1px solid #ddd; /* Add a border for separation */
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears on top */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 350px; /* Increased width for the modal */
+}
+
+.modal-content h3 {
+  background-color: red; /* Red background for the heading */
+  color: white; /* White text color */
+  padding: 10px;
+  margin: -20px -20px 20px; /* Adjust margin to cover padding */
+  border-top-left-radius: 5px; /* Rounded corners */
+  border-top-right-radius: 5px;
+  text-align: center; /* Center the heading text */
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between; /* Align buttons */
+}
+
+.cancel-button,
+.confirm-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #f6c087; /* Cancel button color */
+  color: #999999; /* Cancel button text color */
+}
+
+.cancel-button:hover {
+  background-color: #e6b56f; /* Hover effect */
+}
+
+.confirm-button {
+  background-color: #999999; /* Confirm button color */
+  color: #f6c087; /* Confirm button text color */
+}
+
+.confirm-button:hover {
+  background-color: #888; /* Hover effect */
+}

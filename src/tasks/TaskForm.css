@@ -1,0 +1,55 @@
+/* Task Form Styles */
+.task-form {
+  display: flex;
+  flex-direction: column; /* Column layout */
+}
+
+/* Input Styles */
+.task-form input,
+.task-form select,
+.task-form textarea {
+  padding: 10px;
+  margin-bottom: 10px; /* Spacing between fields */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Textarea Styles */
+.task-form textarea {
+  resize: none; /* Disable resizing */
+}
+
+/* Button Styles for Form */
+.form-buttons {
+  display: flex;
+  justify-content: space-between; /* Align buttons */
+}
+
+/* Cancel Button */
+.cancel-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #e6b56f; /* Cancel button color */
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #d6a35f; /* Hover effect */
+}
+
+/* Confirm Button */
+.confirm-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #999999; /* Confirm button color */
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #888888; /* Hover effect */
+}

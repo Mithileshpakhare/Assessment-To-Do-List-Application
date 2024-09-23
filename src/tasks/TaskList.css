@@ -1,0 +1,131 @@
+.task-list {
+  margin: 20px;
+}
+
+.task-header-container {
+  display: flex;
+  justify-content: space-between; /* Align header and buttons */
+  align-items: center; /* Center vertically */
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+}
+
+.task-icon {
+  background-color: #c5184a; /* Background color for icon only */
+  color: white; /* Icon color */
+  padding: 5px;
+  border-radius: 50%; /* Make it round */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Align items on both ends */
+  align-items: center; /* Center vertically */
+  margin: 10px 0; /* Space above and below the buttons */
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column; /* Stack header and record count */
+  align-items: flex-start; /* Align to the left */
+}
+
+.action-buttons {
+  display: flex; /* Keep buttons in a row */
+  align-items: center; /* Center buttons vertically */
+}
+
+.new-task-button,
+.refresh-button {
+  background-color: #e6b56f; /* Button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Adjust padding for buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.refresh-button {
+  margin-left: 5px; 
+}
+
+.search-bar {
+  padding: 8px;
+  width: 15%; /* Set width for search bar */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.new-task-button:hover, 
+.refresh-button:hover {
+  background-color: #d6a05f; /* Hover effect */
+}
+
+.task-item-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-item-table th,
+.task-item-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-item-table th {
+  background-color: #b3aba3;
+  color: #333;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end; /* Align pagination to the right */
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f6c087; /* Pagination button background */
+  color: #333; /* Set text color for contrast */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #e6b56f; /* Hover effect for pagination buttons */
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.delete-selected-button {
+  background-color: #e6b56f; /* Button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Adjust padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* For hover effects */
+  margin: 10px 0; /* Space around the button */
+}
+
+.delete-selected-button:hover {
+  background-color: #d6a05f; /* Darker shade for hover effect */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.delete-selected-button:disabled {
+  background-color: #ccc; /* Color when disabled */
+  cursor: not-allowed; /* Change cursor to indicate disabled */
+}
