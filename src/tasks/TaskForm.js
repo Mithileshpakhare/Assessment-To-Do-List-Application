@@ -19,7 +19,7 @@ const TaskForm = ({ onAddTask, onEditTask, editingTask, onCancel }) => {
         title: '',
         description: '',
         dueDate: '',
-        status: 'Pending',
+        status: 'Not Started',
         priority: 'Normal',
         assignedTo: '',
       });
@@ -79,7 +79,7 @@ const TaskForm = ({ onAddTask, onEditTask, editingTask, onCancel }) => {
           onChange={handleChange}
           required
         >
-          <option value="Pending">Not Started</option>
+          <option value="Not Started">Not Started</option>
           <option value="In Progress">In Progress</option>
           <option value="Completed">Completed</option>
         </select>

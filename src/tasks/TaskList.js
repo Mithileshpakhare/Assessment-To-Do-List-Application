@@ -114,20 +114,37 @@ const TaskList = ({ tasks, onEditClick, onDeleteClick, onNewTask }) => {
       </button>
 
       <div className="pagination">
-        <button disabled={currentPage === 1} onClick={() => setCurrentPage(1)}>
-          <FaArrowUp /> First
-        </button>
-        <button disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage - 1)}>
-          <FaArrowLeft /> Prev
-        </button>
-        <span>{currentPage}</span>
-        <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(currentPage + 1)}>
-          <FaArrowRight /> Next
-        </button>
-        <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(totalPages)}>
-          <FaArrowDown /> Last
-        </button>
-      </div>
+  <button 
+    disabled={currentPage === 1} 
+    onClick={() => setCurrentPage(1)}
+  >
+    <FaArrowUp /> First
+  </button>
+  
+  <button 
+    disabled={currentPage === 1} 
+    onClick={() => setCurrentPage(prevPage => Math.max(prevPage - 1, 1))}  // Ensures it doesn't go below 1
+  >
+    <FaArrowLeft /> Prev
+  </button>
+  
+  <span>{currentPage}</span>
+  
+  <button 
+    disabled={currentPage === totalPages} 
+    onClick={() => setCurrentPage(prevPage => Math.min(prevPage + 1, totalPages))}  // Ensures it doesn't go beyond total pages
+  >
+    <FaArrowRight /> Next
+  </button>
+  
+  <button 
+    disabled={currentPage === totalPages} 
+    onClick={() => setCurrentPage(totalPages)}
+  >
+    <FaArrowDown /> Last
+  </button>
+</div>
+
 
       {showConfirmDelete && (
         <div className="modal-overlay">
